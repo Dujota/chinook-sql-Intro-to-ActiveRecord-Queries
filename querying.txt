@@ -3,8 +3,13 @@ Part 1
 Provide one or more Active Record queries that retrieve the requested data for each of the following:
 
 Find the albums recorded by the artist Queen.
+first: irb(main):005:0> Artist.where(name: 'Queen')
+then: irb(main):007:0> pp Album.where(artist_id: 51)
 
 Count how many tracks belong to the media type "Protected MPEG-4 video file".
+first MediaType.where(name: 'Protected MPEG-4 video file')
+then: Track.where(media_type_id: 3).count
+
 
 Find the genre with the name "Hip Hop/Rap".
 
